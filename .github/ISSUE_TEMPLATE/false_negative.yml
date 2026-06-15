@@ -1,0 +1,65 @@
+name: False Negative
+description: AegisPlay missed a relevant issue or vulnerability in a snippet.
+title: "[False Negative]: "
+labels: ["false negative", "engine"]
+body:
+
+* type: markdown
+  attributes:
+  value: |
+  Thanks for helping improve AegisPlay's detection quality.
+
+  ```
+  **Important:** Please provide only a minimal, sanitized code snippet. Do not paste production secrets, API keys, credentials, private keys, tokens, customer data, or highly sensitive proprietary code.
+  ```
+
+* type: textarea
+  id: summary
+  attributes:
+  label: What was missed?
+  description: Briefly describe the issue, vulnerability, or bad pattern AegisPlay failed to detect.
+  placeholder: "Example: The snippet contains SQL injection, but the engine did not flag it."
+  validations:
+  required: true
+
+* type: textarea
+  id: snippet
+  attributes:
+  label: Minimal Sanitized Code Snippet
+  description: Paste the smallest safe snippet that reproduces the missed issue.
+  render: python
+  placeholder: |
+  # Paste sanitized code here.
+  # Remove secrets, tokens, real customer data, and proprietary logic.
+  validations:
+  required: true
+
+* type: dropdown
+  id: mode
+  attributes:
+  label: Analysis Mode
+  description: Which mode missed the issue?
+  options:
+  - Code Audit
+  - Security Test
+  - Both
+  - Not sure
+  validations:
+  required: true
+
+* type: textarea
+  id: expected
+  attributes:
+  label: Expected Finding
+  description: What should AegisPlay have detected?
+  placeholder: "Example: This should be flagged as command injection because user-controlled input reaches os.system()."
+  validations:
+  required: true
+
+* type: textarea
+  id: context
+  attributes:
+  label: Additional Context
+  description: Add any extra explanation that helps clarify why this should be detected.
+  validations:
+  required: false
