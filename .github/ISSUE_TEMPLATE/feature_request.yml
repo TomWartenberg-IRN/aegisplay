@@ -1,0 +1,69 @@
+name: Feature Request
+description: Suggest a new feature, workflow improvement, language support, or integration.
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+
+* type: markdown
+  attributes:
+  value: |
+  Thanks for helping shape AegisPlay.
+
+  ```
+  AegisPlay is currently in public beta. Feature requests are welcome, especially if they improve clarity, reduce scanner noise, improve security learning, or make the workflow more useful for developers.
+  ```
+
+* type: textarea
+  id: problem
+  attributes:
+  label: What problem would this solve?
+  description: Describe the pain point, missing workflow, or limitation you are running into.
+  placeholder: "Example: I want to export findings into a GitHub issue, but currently I have to copy the report manually."
+  validations:
+  required: true
+
+* type: textarea
+  id: solution
+  attributes:
+  label: What would you like AegisPlay to do?
+  description: Describe the feature or improvement you would like to see.
+  placeholder: "Example: Add a one-click export that creates a Markdown issue template from the finding."
+  validations:
+  required: true
+
+* type: dropdown
+  id: area
+  attributes:
+  label: Product Area
+  description: Which part of AegisPlay does this relate to?
+  options:
+  - Code Audit
+  - Security Test
+  - AI Engineer Insight
+  - Secure Patch / Refactor Prompt
+  - Report Export
+  - Scan History
+  - Billing / Credits
+  - UI / UX
+  - Language / Framework Support
+  - Integrations
+  - Other
+  validations:
+  required: true
+
+* type: textarea
+  id: alternatives
+  attributes:
+  label: Alternatives or Workarounds
+  description: Are you currently solving this another way?
+  placeholder: "Example: I currently paste the output into another tool manually."
+  validations:
+  required: false
+
+* type: textarea
+  id: context
+  attributes:
+  label: Additional Context
+  description: Add screenshots, examples, or details that may help.
+  validations:
+  required: false
