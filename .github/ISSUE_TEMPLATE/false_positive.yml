@@ -1,0 +1,65 @@
+name: False Positive
+description: AegisPlay flagged something as risky, but it appears harmless or expected.
+title: "[False Positive]: "
+labels: ["false positive", "engine"]
+body:
+
+* type: markdown
+  attributes:
+  value: |
+  Thanks for helping improve AegisPlay's detection quality.
+
+  ```
+  **Important:** Please provide only a minimal, sanitized code snippet. Do not paste production secrets, API keys, credentials, private keys, tokens, customer data, or highly sensitive proprietary code.
+  ```
+
+* type: textarea
+  id: summary
+  attributes:
+  label: What was flagged incorrectly?
+  description: Briefly describe the finding that appears to be a false positive.
+  placeholder: "Example: A standard import was treated as a security issue, or a safe internal helper was flagged as exploitable."
+  validations:
+  required: true
+
+* type: textarea
+  id: snippet
+  attributes:
+  label: Minimal Sanitized Code Snippet
+  description: Paste the smallest safe snippet that reproduces the false positive.
+  render: python
+  placeholder: |
+  # Paste sanitized code here.
+  # Remove secrets, tokens, real customer data, and proprietary logic.
+  validations:
+  required: true
+
+* type: dropdown
+  id: mode
+  attributes:
+  label: Analysis Mode
+  description: Which mode generated the false positive?
+  options:
+  - Code Audit
+  - Security Test
+  - Both
+  - Not sure
+  validations:
+  required: true
+
+* type: textarea
+  id: expected
+  attributes:
+  label: Expected Behavior
+  description: What should AegisPlay have reported instead?
+  placeholder: "Example: This should be an informational sandbox note, not a critical vulnerability."
+  validations:
+  required: true
+
+* type: textarea
+  id: context
+  attributes:
+  label: Additional Context
+  description: Add any extra explanation that helps distinguish the real context from the flagged pattern.
+  validations:
+  required: false
