@@ -1,0 +1,78 @@
+name: Bug Report
+description: Report a product bug, UI issue, or broken workflow.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+
+* type: markdown
+  attributes:
+  value: |
+  Thanks for helping improve the AegisPlay beta.
+
+  ```
+  **Important:** Never paste production secrets, API keys, credentials, tokens, private keys, or highly sensitive proprietary code here or in the playground.
+  ```
+
+* type: textarea
+  id: description
+  attributes:
+  label: Description
+  description: What happened?
+  placeholder: "Example: Login failed, billing display looked wrong, report export did not download, Manage Subscription button opened the wrong page..."
+  validations:
+  required: true
+
+* type: textarea
+  id: reproduction
+  attributes:
+  label: Steps to Reproduce
+  description: How can we trigger this bug?
+  placeholder: |
+  1. Go to ...
+  2. Click ...
+  3. Paste ...
+  4. See ...
+  validations:
+  required: true
+
+* type: dropdown
+  id: mode
+  attributes:
+  label: Analysis Mode
+  description: Which mode were you using when the issue occurred?
+  options:
+  - N/A
+  - Code Audit
+  - Security Test
+  validations:
+  required: true
+
+* type: dropdown
+  id: account
+  attributes:
+  label: Account Status
+  description: Were you signed in or using a specific plan?
+  options:
+  - Guest / not signed in
+  - Signed in / free credits
+  - Paid credit pack
+  - Pro subscription
+  - Not sure
+  validations:
+  required: true
+
+* type: input
+  id: environment
+  attributes:
+  label: Browser / Device
+  description: Example: Chrome on Windows, Safari on iPhone, Firefox on Linux.
+  validations:
+  required: false
+
+* type: textarea
+  id: extra
+  attributes:
+  label: Additional Context
+  description: Add screenshots, sanitized snippets, or anything else that may help.
+  validations:
+  required: false
