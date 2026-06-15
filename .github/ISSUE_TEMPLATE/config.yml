@@ -1,0 +1,15 @@
+blank_issues_enabled: false
+
+contact_links:
+
+* name: Report a platform security vulnerability
+  url: https://aegisplay.net
+  about: Please report sensitive security issues in the AegisPlay application privately via the website, not in a public GitHub issue.
+
+* name: Try AegisPlay
+  url: https://aegisplay.net
+  about: Open the AegisPlay playground.
+
+* name: General feedback
+  url: https://github.com/TomWartenberg-IRN/aegisplay/issues
+  about: Use GitHub Issues for bugs, false positives, false negatives, and feature requests.
